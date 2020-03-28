@@ -8,6 +8,7 @@ public class Challenge {
     ----------------------------------------------------
     */
         firstMethod();
+        secondMethod();
     }
 
     public static void firstMethod(){
@@ -39,5 +40,19 @@ public class Challenge {
                 System.out.println("Try again.");
             }
         }while (!phraseInput.equals(phrase)) ;
+    }
+
+    public static void secondMethod(){
+        //Variables//
+        String firstWord = "Hello";
+        String secondWord = "World";
+
+        System.out.println("--------------------------");
+        System.out.println("¡Welcome to the challengeǃ");
+        System.out.println("--------------------------");
+        System.out.print("In this method we are using 'System.out.printf' to print the phrase: ");
+        /*The printf() method of Java PrintStream class is a convenience method to write a String which is formatted to this output Stream.
+        It uses the specified format string and arguments.*/
+        System.out.printf("%s",firstWord  + " " + secondWord );
     }
 }
