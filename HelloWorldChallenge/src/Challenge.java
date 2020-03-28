@@ -1,16 +1,47 @@
-import javax.swing.*;
+import javax.swing.JOptionPane;
 import java.util.Scanner;
 
 public class Challenge {
 
     public static void main(String[] args) {
-    /*
-    How would you print "Hello World" in different ways?
-    ----------------------------------------------------
-    */
-        firstMethod();
-        secondMethod();
-        thirdMethod();
+
+        //Display Menu//
+        int option;
+
+        do {
+            option = Integer.parseInt(JOptionPane.showInputDialog(null,
+                    "(っ ͡❛ ₒ ͡❛)っ WELCOME TO THE FIRST CHALLENGE\n" +
+                            "-----------------------------------------------------------------------\n" +
+                            "Question:\n" +
+                            "\uD835\uDE77\uD835\uDE98\uD835\uDEA0 \uD835\uDEA0\uD835\uDE98\uD835\uDE9E\uD835\uDE95\uD835\uDE8D \uD835\uDEA2\uD835\uDE98\uD835\uDE9E \uD835\uDE99\uD835\uDE9B\uD835\uDE92\uD835\uDE97\uD835\uDE9D \"\uD835\uDE77\uD835\uDE8E\uD835\uDE95\uD835\uDE95\uD835\uDE98 \uD835\uDE86\uD835\uDE98\uD835\uDE9B\uD835\uDE95\uD835\uDE8D\" \uD835\uDE92\uD835\uDE97 \uD835\uDE8D\uD835\uDE92\uD835\uDE8F\uD835\uDE8F\uD835\uDE8E\uD835\uDE9B\uD835\uDE8E\uD835\uDE97\uD835\uDE9D \uD835\uDEA0\uD835\uDE8A\uD835\uDEA2\uD835\uDE9C?\n" +
+                            "\n" +
+                            "I create 3 examples.\n" +
+                            "\n" +
+                            "1. - First Method\n" +
+                            "2. - Second Method\n" +
+                            "3. - Third Method\n" +
+                            "4. - Exit.\n" +
+                            "\n" +
+                            "\uD835\uDE0C\uD835\uDE2F\uD835\uDE2B\uD835\uDE30\uD835\uDE3A \uD835\uDE22\uD835\uDE2F\uD835\uDE25 \uD835\uDE25\uD835\uDE30\uD835\uDE2F´\uD835\uDE35 \uD835\uDE27\uD835\uDE30\uD835\uDE33\uD835\uDE28\uD835\uDE26\uD835\uDE35 \uD835\uDE35\uD835\uDE30 \uD835\uDE2E\uD835\uDE22\uD835\uDE2C\uD835\uDE26 \uD835\uDE3A\uD835\uDE30\uD835\uDE36\uD835\uDE33 \uD835\uDE26\uD835\uDE39\uD835\uDE22\uD835\uDE2E\uD835\uDE31\uD835\uDE2D\uD835\uDE26. シ\n" +
+                            "Choose an option: ", "Menu", JOptionPane.QUESTION_MESSAGE));
+
+            switch (option) {
+                case 1:
+                    firstMethod();
+                    break;
+                case 2:
+                    secondMethod();
+                    break;
+                case 3:
+                    thirdMethod();
+                    break;
+                case 4:
+                    System.exit(0);
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Choose a valid option\n", "Error option", JOptionPane.WARNING_MESSAGE);
+            }
+        } while (option != 4);
     }
 
     public static void firstMethod(){
