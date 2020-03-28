@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Challenge {
@@ -9,6 +10,7 @@ public class Challenge {
     */
         firstMethod();
         secondMethod();
+        thirdMethod();
     }
 
     public static void firstMethod(){
@@ -55,4 +57,36 @@ public class Challenge {
         It uses the specified format string and arguments.*/
         System.out.printf("%s",firstWord  + " " + secondWord );
     }
+
+    public static void thirdMethod(){
+        //Variables//
+        String phrase = "Hello World";
+        String phraseInput;
+
+        do {
+            /*The JOptionPane class is used to provide standard dialog boxes such as message dialog box, confirm dialog box and input dialog box.
+             These dialog boxes are used to display information or get input from the user. The JOptionPane class inherits JComponent class.*/
+            JOptionPane.showMessageDialog(
+                    null,
+                        "---------------------------------------\n" +
+                                 "¡Welcome to the challengeǃ\n" +
+                                 "---------------------------------------\n" +
+                                 "In order to succeed this challenge you will need to type the phrase: 'Hello World'\n"
+            );
+
+            phraseInput = JOptionPane.showInputDialog("Enter phrase: ");
+            //Comparing Strings//
+            if (phrase.equals(phraseInput)) {
+                JOptionPane.showMessageDialog(null,"Congrats! you have passed the challenge.");
+                JOptionPane.showMessageDialog(null,"(っ ͡❛ ‿ ͡❛)っ\uD83C\uDF94");
+
+            } else {
+                JOptionPane.showMessageDialog(null,"Wrong answer mate!");
+                JOptionPane.showMessageDialog(null,"(ಥ_ಥ) You introduce the phrase: " + phraseInput);
+                JOptionPane.showMessageDialog(null,"Try again.");
+            }
+        }while (!phraseInput.equals(phrase)) ;
+    }
+
 }
+
